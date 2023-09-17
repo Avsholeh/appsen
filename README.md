@@ -1,5 +1,7 @@
 ## Appsen (Absensi Karyawan)
 
+![Appsen](public/images/appsen.png)
+
 ### Pendahuluan
 
 Appsen adalah aplikasi absensi karyawan yang dibangun menggunakan Laravel. Aplikasi ini berguna untuk membantu perusahaan dalam melacak dan mengelola absensi karyawan mereka dengan efisien.
