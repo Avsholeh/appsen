@@ -1,0 +1,11 @@
+footer ul {
+    padding: 0;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+}

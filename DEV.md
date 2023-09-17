@@ -1,3 +1,25 @@
+### Kebutuhan Sistem
+
+- Laravel v8
+- PHP 7.4
+- MySQL 8.0
+
+### Kebutuhan Pengembangan
+
+- VSCode
+
+#### VSCode Plugins
+- Auto Close Tag
+- Auto Import
+- Auto Rename Tag
+- Git Graph
+- Laravel Blade Snippets
+- Laravel Blade Spacer
+- Laravel Blade Formatter
+- Laravel Goto
+- PHP Intelephense
+- PHP Namespace Resolver
+
 ### Skema Database
 
 Aplikasi ini memiliki beberapa tabel dalam database untuk menyimpan data absensi karyawan. Berikut adalah skema database yang digunakan:
@@ -116,15 +138,3 @@ Keterangan: [❌] Belum dikerjakan [✔️] Sudah dikerjakan
 - [❌] Buat dokumentasi untuk pengembang (README).
 
 Pastikan untuk memprioritaskan tugas-tugas ini sesuai dengan kebutuhan proyek dan waktu yang tersedia. Semua tugas harus diuji dengan baik sebelum meluncurkan aplikasi ke produksi.
-
-### VSCode Plugins
-- Auto Close Tag
-- Auto Import
-- Auto Rename Tag
-- Git Graph
-- Laravel Blade Snippets
-- Laravel Blade Spacer
-- Laravel Blade Formatter
-- Laravel Goto
-- PHP Intelephense
-- PHP Namespace Resolver
