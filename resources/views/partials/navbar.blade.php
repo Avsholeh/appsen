@@ -25,6 +25,12 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ route('dashboard') }}">Dashboard</a>
                     </li>
+                    <li class="nav-item">
+                        <form action="{{ route('logout') }}" method="post">
+                            @csrf
+                            <input class="nav-link" type="submit" value="Logout">
+                        </form>
+                    </li>
                 </ul>
             @endauth
         </div>
