@@ -83,7 +83,7 @@ Keterangan: [❌] Belum dikerjakan [✔️] Sudah dikerjakan
 #### 1. Pengaturan Awal
 - [✔️] Buat proyek Laravel baru.
 - [✔️] Konfigurasi koneksi database.
-- [❌] Instalasi dan konfigurasi Laravel Authentication.
+- [✔️] Instalasi dan konfigurasi Laravel Authentication.
 
 #### 2. Membuat Model dan Database Migration
 - [❌] Buat model `Karyawan` dengan migration.
