@@ -20,9 +20,11 @@
                     <img src="{{ asset('images/cartoon-date-picker.png') }}" class="img-fluid" loading="lazy">
                 </div>
                 <div class="col-12 col-sm-12 col-md-6 d-flex flex-column justify-content-center">
-                    <h1 class="pb-2">Appsen <i class="bi bi-check-circle-fill text-primary" style="font-size: .7em"></i></h1>
+                    <h1 class="pb-2">Appsen <i class="bi bi-check-circle-fill text-primary"
+                            style="font-size: .7em"></i></h1>
                     <h3>Lacak Kehadiran Karyawan Anda dengan Mudah!</h3>
-                    <p class="text-muted pb-2">Aplikasi absensi karyawan yang dapat membantu perusahaan Anda dalam melacak
+                    <p class="text-muted pb-2">Aplikasi absensi karyawan yang dapat membantu perusahaan Anda dalam
+                        melacak
                         dan mengelola absensi
                         karyawan dengan efisien.</p>
                     <div>
@@ -43,30 +45,32 @@
                 <h3 class="text-center mb-5">Mengapa Memilih <strong>Appsen</strong>?</h3>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="card mb-3" >
+                        <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4 text-center">
-                                    <img src="{{ asset('images/cartoon-annotation.png') }}" alt="Manajemen Absensi Karyawan"
-                                        class="img-fluid" style="max-width: 70%">
+                                    <img src="{{ asset('images/cartoon-annotation.png') }}"
+                                        alt="Manajemen Absensi Karyawan" class="img-fluid" style="max-width: 70%">
                                 </div>
                                 <div class="col-md-8 card-body text-center text-lg-start">
                                     <h5 class="card-title">Manajemen Absensi Karyawan</h5>
-                                    <p class="card-text">Memungkinkan perusahaan untuk melacak, merekam, dan mengelola kehadiran karyawan.</p>
+                                    <p class="card-text">Memungkinkan perusahaan untuk melacak, merekam, dan mengelola
+                                        kehadiran karyawan.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-md-6 ">
-                        <div class="card mb-3" >
+                        <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4 text-center">
-                                    <img src="{{ asset('images/cartoon-sign-in.png') }}" alt="Rekam Waktu Masuk dan Keluar"
-                                        class="img-fluid" style="max-width: 70%">
+                                    <img src="{{ asset('images/cartoon-sign-in.png') }}"
+                                        alt="Rekam Waktu Masuk dan Keluar" class="img-fluid" style="max-width: 70%">
                                 </div>
                                 <div class="col-md-8 card-body text-center text-lg-start">
                                     <h5 class="card-title">Rekam Waktu Masuk dan Keluar</h5>
-                                    <p class="card-text">Memungkinkan perusahaan untuk melacak, merekam, dan mengelola kehadiran karyawan.</p>
+                                    <p class="card-text">Merekam waktu kedatangan dan kepergian karyawan dengan akurat.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -75,7 +79,7 @@
 
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="card mb-3" >
+                        <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4 text-center">
                                     <img src="{{ asset('images/cartoon-growth.png') }}" alt="Laporan Absensi"
@@ -83,7 +87,9 @@
                                 </div>
                                 <div class="col-md-8 card-body text-center text-lg-start">
                                     <h5 class="card-title">Laporan Absensi</h5>
-                                    <p class="card-text">Memungkinkan perusahaan untuk melacak, merekam, dan mengelola kehadiran karyawan.</p>
+                                    <p class="card-text">Menghasilkan laporan terkait absensi karyawan, termasuk
+                                        informasi tentang jumlah cuti, izin, keterlambatan, dan absensi tidak terjadwal.
+                                    </p>
                                 </div>
                             </div>
                         </div>
