@@ -1,5 +1,10 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+// @import url('../fonts/SourceSans3-Regular.ttf');
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('../fonts/SourceSans3-Regular.ttf') format('truetype'),
+        url('../fonts/SourceSans3-Bold.ttf') format('truetype'),
+}
 
 // Variables
 @import 'variables';
