@@ -23,7 +23,12 @@
             @auth
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('dashboard') }}">Dashboard</a>
+                        <a class="nav-link @if (request()->routeIs('dashboard')) active @endif"
+                            href="{{ route('dashboard') }}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  @if (request()->routeIs('departemen.index')) active @endif"
+                            href="{{ route('departemen.index') }}">Departemen</a>
                     </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="post">
