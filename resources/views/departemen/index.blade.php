@@ -12,7 +12,7 @@
         <div class="col-md-8">
             <div class="d-flex justify-content-between">
                 <h3><i class="bi bi-building me-3"></i>Departemen</h3>
-                <div><a href="#" class="btn btn-primary btn-sm">Tambah</a></div>
+                <div><a href="{{ route('departemen.create') }}" class="btn btn-primary btn-sm">Tambah</a></div>
             </div>
         </div>
     </div>
