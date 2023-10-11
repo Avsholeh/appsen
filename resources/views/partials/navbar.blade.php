@@ -26,6 +26,9 @@
                         <a class="nav-link active" href="{{ route('dashboard') }}">Dashboard</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" href="{{ route('jabatan.index') }}">Jabatan</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" href="{{ route('departemen.index') }}">Departemen</a>
                     </li>
                     <li class="nav-item">

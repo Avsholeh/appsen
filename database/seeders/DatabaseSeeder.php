@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('admin'),
         ]);
 
+        \App\Models\Jabatan::factory(100)->create();
         \App\Models\Departemen::factory(100)->create();
+
     }
 }
