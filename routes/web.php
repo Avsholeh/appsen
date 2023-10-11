@@ -14,5 +14,7 @@ Route::middleware('auth')->group(function() {
     Route::resource('/jabatan', JabatanController::class)->names([
             'index' => 'jabatan.index',
             'store' => 'jabatan.store',
+            'edit' => 'jabatan.edit',
+            'update' => 'jabatan.update',
             ]);
 });

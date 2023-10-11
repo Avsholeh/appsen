@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
         public function index()
         {
             //
-            $jabatans = Jabatan::all();
+            $jabatans = Jabatan::paginate();
 
             return view('jabatan.index',compact('jabatans'));
         }
@@ -28,6 +28,7 @@ use Illuminate\Http\Request;
     public function create()
     {
         //
+        return view('jabatan.create');
     }
 
     /**
@@ -38,7 +39,22 @@ use Illuminate\Http\Request;
      */
     public function store(Request $request)
     {
-        //
+        //validasi
+
+        // dd($request);
+        $request->validate([
+            'nama'=>'required',
+            'deskripsi'=>'required',
+
+        ]);
+        //simpan
+        $jabatan = new Jabatan;
+        $jabatan->nama = $request->nama;
+        $jabatan->deskripsi = $request->deskripsi;
+        $jabatan->save();
+
+        return redirect()->route('jabatan.index')
+        ->with('message','Data berhasil  ditambahkan');
     }
 
     /**
@@ -60,7 +76,10 @@ use Illuminate\Http\Request;
      */
     public function edit($id)
     {
+
         //
+        $jabatan = Jabatan::find($id);
+        return view('jabatan.edit',compact('jabatan'));
     }
 
     /**
@@ -70,9 +89,24 @@ use Illuminate\Http\Request;
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
+        // dd($request->input());
         //
+        $request->validate([
+            'nama'=>'required',
+            'deskripsi'=>'required',
+
+        ]);
+        //simpan
+        // dd($jabatan)
+        $jabatan = Jabatan::find($request->id);
+        $jabatan->nama = $request->nama;
+        $jabatan->deskripsi = $request->deskripsi;
+        $jabatan->save();
+
+        return redirect()->route('jabatan.index')
+        ->with('message','Data berhasil  diperbaharui');
     }
 
     /**
@@ -84,5 +118,10 @@ use Illuminate\Http\Request;
     public function destroy($id)
     {
         //
+        $jabatan = Jabatan::find($id);
+        $jabatan->delete();
+
+        return redirect()->route('jabatan.index')
+        ->with('message','Data berhasil  dihapus');
     }
 }
