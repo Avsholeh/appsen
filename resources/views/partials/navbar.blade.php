@@ -27,6 +27,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="{{ route('jabatan.index') }}">Jabatan</a>
+                        <a class="nav-link active" href="{{ route('departemen.index') }}">Departemen</a>
                     </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="post">
