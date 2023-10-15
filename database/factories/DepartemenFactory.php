@@ -15,7 +15,7 @@ class DepartemenFactory extends Factory
     {
         return [
             'nama' => $this->faker->firstName(),
-            'deskripsi' => $this->faker->paragraph(),
+            'deskripsi' => $this->faker->text(100),
         ];
     }
 }
