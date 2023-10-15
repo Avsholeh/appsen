@@ -25,6 +25,7 @@
                         <th scope="col">ID</th>
                         <th scope="col">Nama Jabatan</th>
                         <th scope="col">Deskripsi</th>
+                        <th scope="col">Total User</th>
                         <th scope="col">#</th>
                     </tr>
                 </thead>
@@ -34,6 +35,7 @@
                             <th scope="row">{{ $jabatan->id }}</th>
                             <td>{{ $jabatan->nama }}</td>
                             <td>{{ $jabatan->deskripsi }}</td>
+                            <td>{{ $jabatan->users->count('id')}}</td>
                             <td>
                                 <form action="{{ route('jabatan.destroy', $jabatan->id) }}" method="POST">
                                     @csrf

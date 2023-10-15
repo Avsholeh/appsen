@@ -10,4 +10,8 @@ class Jabatan extends Model
     use HasFactory;
 
     protected $table = 'jabatan';
+    public function users()
+    {
+        return $this->hasMany(User::class, 'jabatan_id', 'id');
+    }
 }

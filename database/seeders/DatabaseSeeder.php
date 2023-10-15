@@ -14,18 +14,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Departemen::factory(100)->create();
-        
+        \App\Models\Departemen::factory(5)->create();
+        \App\Models\Jabatan::factory(5)->create();
         \App\Models\User::factory()->create([
             'name' => 'Administrator',
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin'),
         ]);
 
-        \App\Models\User::factory(5)->create();
+        \App\Models\User::factory(100)->create();
 
-        \App\Models\Jabatan::factory(100)->create();
-        
+
+
 
     }
 }

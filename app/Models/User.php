@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Departemen::class, 'id', 'departemen_id');
     }
+
+    public function jabatan()
+    {
+        return $this->hasOne(Jabatan::class, 'id', 'jabatan_id');
+    }
 }

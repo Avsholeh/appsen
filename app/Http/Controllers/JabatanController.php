@@ -15,8 +15,10 @@ use Illuminate\Http\Request;
         public function index()
         {
             //
-            $jabatans = Jabatan::paginate();
 
+            $jabatans = Jabatan::with('users:id,jabatan_id')->select('id','deskripsi','nama')->paginate();
+            // $users = Jabatan->users();
+            // dd($jabatans);
             return view('jabatan.index',compact('jabatans'));
         }
 
@@ -42,6 +44,7 @@ use Illuminate\Http\Request;
         //validasi
 
         // dd($request);
+       
         $request->validate([
             'nama'=>'required',
             'deskripsi'=>'required',
