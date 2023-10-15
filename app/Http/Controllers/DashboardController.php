@@ -11,7 +11,7 @@ class DashboardController extends Controller
     {
 
         $jabatan = Jabatan::find(5);
-        // dd($jabatan);
+
         return view('dashboard',compact('jabatan'));
     }
 }
