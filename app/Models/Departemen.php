@@ -10,4 +10,9 @@ class Departemen extends Model
     use HasFactory;
 
     protected $table = 'departemen';
+
+    public function users()
+    {
+        return $this->hasMany(User::class, 'departemen_id', 'id');
+    }
 }
