@@ -46,4 +46,14 @@ class User extends Authenticatable
     {
         return $this->hasOne(Departemen::class, 'id', 'departemen_id');
     }
+
+    public function absensi()
+    {
+        return $this->hasMany(Absensi::class, 'user_id', 'id');
+    }
+
+    public function absensi_latest()
+    {
+        return $this->hasOne(Absensi::class, 'user_id', 'id')->latest('tanggal');
+    }
 }
