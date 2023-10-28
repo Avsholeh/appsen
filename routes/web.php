@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AbsensiController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\DepartemenController;
@@ -10,15 +11,15 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
-Route::middleware('auth')->group(function() {
+Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::resource('/jabatan', JabatanController::class)->names([
-            'index' => 'jabatan.index',
-            'store' => 'jabatan.store',
-            'edit' => 'jabatan.edit',
-            'update' => 'jabatan.update',
-            ]);
+        'index' => 'jabatan.index',
+        'store' => 'jabatan.store',
+        'edit' => 'jabatan.edit',
+        'update' => 'jabatan.update',
+    ]);
 
     Route::resource('/departemen', DepartemenController::class)->names([
         'index' => 'departemen.index',
@@ -27,4 +28,11 @@ Route::middleware('auth')->group(function() {
         'update' => 'departemen.update',
     ]);
 
+    Route::resource('/absensi', AbsensiController::class)->names([
+        'index' => 'absensi.index',
+        'store' => 'absensi.store',
+        'edit' => 'absensi.edit',
+        'update' => 'absensi.update',
+        'destroy' => 'absensi.destroy',
+    ]);
 });
