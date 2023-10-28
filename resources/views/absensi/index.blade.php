@@ -72,10 +72,10 @@
                                 <small class="badge bg-primary me-2">{{ $user->id }}</small>
                                 <span>{{ $user->name }}</span>
                             </td>
-                            @if (!empty($user->absensi_latest) && $user->absensi_latest->tanggal->equalTo($selectedDate->format('Y-m-d')))
-                                <td>{{ $user->absensi_latest->tanggal }}</td>
-                                <td>{{ $user->absensi_latest->jam_masuk }}</td>
-                                <td>{{ $user->absensi_latest->jam_keluar }}</td>
+                            @if (!empty($user->absensi->count()) && $user->absensi->first()->tanggal->equalTo($selectedDate->format('Y-m-d')))
+                                <td>{{ $user->absensi->first()->tanggal }}</td>
+                                <td>{{ $user->absensi->first()->jam_masuk }}</td>
+                                <td>{{ $user->absensi->first()->jam_keluar }}</td>
                                 <td><span class="badge bg-success">Masuk</span></td>
                             @else
                                 <td>-</td>

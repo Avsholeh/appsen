@@ -12,10 +12,17 @@ class AbsensiController extends Controller
     public function index(Request $request)
     {
         $selectedDate = Carbon::today();
-        if (!empty($request->tanggal)) {
-            $selectedDate = Carbon::createFromFormat('Y-m-d', $request->tanggal);
-        }
-        $users = User::with('absensi_latest')->paginate();
+        try {
+            if (!empty($request->tanggal)) {
+                $selectedDate = Carbon::createFromFormat('Y-m-d', $request->tanggal);
+            }
+        } catch (\Exception $th) {}
+        
+        $users = User::with([
+            'absensi' => function ($q) use ($selectedDate) {
+                $q->where('tanggal', $selectedDate->format('Y-m-d'));
+            }
+        ])->paginate(10);
         return view('absensi.index', compact('users', 'selectedDate'));
     }
 
