@@ -15,9 +15,15 @@ class DepartemenTest extends TestCase
 
     protected $seed = true;
 
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->actingAs(User::find(1));
+    }
+
     public function test_it_displays_departemen_index()
     {
-        $response = $this->actingAs(User::find(1))->get(route('departemen.index'));
+        $response = $this->get(route('departemen.index'));
 
         $response->assertStatus(200);
     }
@@ -29,7 +35,7 @@ class DepartemenTest extends TestCase
             'deskripsi' => $this->faker->text(20),
         ];
 
-        $response = $this->actingAs(User::find(1))->post(route('departemen.store'), $data);
+        $response = $this->post(route('departemen.store'), $data);
 
         $response->assertRedirect(route('departemen.index'));
         $this->assertDatabaseHas('departemen', $data);
@@ -44,7 +50,7 @@ class DepartemenTest extends TestCase
             'deskripsi' => $this->faker->text(20),
         ];
 
-        $response = $this->actingAs(User::find(1))->put(route('departemen.update', $departemen->id), $data);
+        $response = $this->put(route('departemen.update', $departemen->id), $data);
         $response->assertRedirect(route('departemen.index'));
         $this->assertDatabaseHas('departemen', $data);
     }
@@ -53,7 +59,7 @@ class DepartemenTest extends TestCase
     {
         $departemen = Departemen::factory()->create();
 
-        $response = $this->actingAs(User::find(1))->delete(route('departemen.destroy', $departemen->id));
+        $response = $this->delete(route('departemen.destroy', $departemen->id));
 
         $response->assertRedirect(route('departemen.index'));
         $this->assertDatabaseMissing('departemen', ['id' => $departemen->id]);
