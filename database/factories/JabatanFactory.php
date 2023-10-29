@@ -16,7 +16,7 @@ class JabatanFactory extends Factory
         return [
             //
             'nama' => $this->faker->firstname(),
-            'deskripsi' => $this->faker->text(100),
+            'deskripsi' => $this->faker->text(50),
         ];
     }
 }

@@ -15,26 +15,36 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Departemen::factory(100)->create();
-
         \App\Models\User::factory()->create([
             'name' => 'Administrator',
             'email' => 'admin@admin.com',
             'password' => Hash::make('admin'),
         ]);
 
-        $users = \App\Models\User::factory(5)->create();
+        $json = json_decode(file_get_contents('database/seeders/seeders.json'));
 
-        foreach ($users as $user) {
-            $today = \Carbon\Carbon::now();
-            // generate data absensi untuk hari ini
-            Absensi::factory()->for($user)->create([
-                'tanggal' => $today,
+        foreach ($json->Departemen as $departemen => $jabatans) {
+            $new_departemen = \App\Models\Departemen::factory()->create([
+                'nama' => $departemen
             ]);
-            // generate data absensi bebas
-            Absensi::factory(5)->for($user)->create();
-        }
+            foreach ($jabatans as $jabatan) {
+                $new_jabatan = \App\Models\Jabatan::factory()->create([
+                    'nama' => $jabatan
+                ]);
 
-        \App\Models\Jabatan::factory(100)->create();
+                $user = \App\Models\User::factory()
+                    ->for($new_departemen)
+                    ->for($new_jabatan)
+                    ->create();
+
+                $today = \Carbon\Carbon::now();
+                // generate data absensi untuk hari ini
+                Absensi::factory()->for($user)->create([
+                    'tanggal' => $today,
+                ]);
+                // generate data absensi bebas
+                Absensi::factory(5)->for($user)->create();
+            }
+        }
     }
 }

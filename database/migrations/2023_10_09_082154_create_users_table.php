@@ -26,6 +26,11 @@ class CreateUsersTable extends Migration
                 ->nullable()
                 ->constrained('departemen');
 
+            // jabatan
+            $table->foreignId('jabatan_id')
+                ->nullable()
+                ->constrained('jabatan');
+
             $table->timestamps();
         });
     }
