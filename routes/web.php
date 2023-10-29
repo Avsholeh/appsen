@@ -19,6 +19,7 @@ Route::middleware('auth')->group(function () {
         'store' => 'jabatan.store',
         'edit' => 'jabatan.edit',
         'update' => 'jabatan.update',
+        'destroy' => 'jabatan.destroy',
     ]);
 
     Route::resource('/departemen', DepartemenController::class)->names([
@@ -26,6 +27,7 @@ Route::middleware('auth')->group(function () {
         'store' => 'departemen.store',
         'edit' => 'departemen.edit',
         'update' => 'departemen.update',
+        'destroy' => 'departemen.destroy',
     ]);
 
     Route::resource('/absensi', AbsensiController::class)->names([
