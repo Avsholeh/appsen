@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
                     'tanggal' => $today,
                 ]);
                 // generate data absensi bebas
-                Absensi::factory(5)->for($user)->create();
+                Absensi::factory(3)->for($user)->create();
             }
         }
     }
