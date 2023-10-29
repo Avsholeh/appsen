@@ -2,60 +2,37 @@
     "Departemen": {
       "Pengembangan Produk": [
         "Product Manager",
-        "Product Designer",
-        "Product Developer",
-        "UX/UI Designer",
-        "Data Scientist"
+        "UX/UI Designer"
       ],
       "Pemasaran dan Penjualan": [
         "Head of Marketing",
-        "Head of Sales",
-        "Growth Hacker",
-        "Content Writer",
-        "Sales Development Representative (SDR)"
+        "Head of Sales"
       ],
-      "Pengembangan Bisnis": [
-        "Business Development Manager",
-        "Partnerships Manager",
-        "Sales Operations Manager"
-      ],
-      "Keuangan dan Keuangan": [
+      "Keuangan": [
         "Financial Analyst",
-        "Accountant",
-        "Controller",
-        "Bookkeeper"
+        "Accountant"
       ],
       "Operasi": [
-        "Operations Manager",
-        "Office Manager",
-        "Logistics Manager"
+        "Operations Manager"
       ],
       "Sumber Daya Manusia (SDM)": [
-        "CHRO",
         "HR Manager",
-        "Recruiter",
         "Training and Development Specialist"
       ],
       "Teknologi Informasi (TI) dan Teknologi": [
         "Head of Engineering",
         "DevOps Engineer",
-        "Data Engineer",
         "IT Support Specialist"
       ],
       "Desain dan Kreativitas": [
-        "Head of Design",
         "Graphic Designer",
-        "Video Editor",
-        "Content Creator"
+        "Video Editor"
       ],
       "Pengelolaan Proyek": [
-        "Project Manager",
-        "Scrum Master",
-        "Agile Coach"
+        "Project Manager"
       ],
       "Hukum dan Kepatuhan": [
-        "Legal Counsel",
-        "Compliance Officer"
+        "Legal Counsel"
       ],
       "Pelanggan dan Dukungan": [
         "Customer Support Specialist",
