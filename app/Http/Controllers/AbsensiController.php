@@ -22,8 +22,22 @@ class AbsensiController extends Controller
             'absensi' => function ($q) use ($selectedDate) {
                 $q->where('tanggal', $selectedDate->format('Y-m-d'));
             }
-        ])->paginate(10)->withQueryString();
-        return view('absensi.index', compact('users', 'selectedDate'));
+        ]);
+
+        $absensi = $users->get()->pluck('absensi');
+        
+        // Menghitung jumlah karyawan yang hadir
+        $hadir = count($absensi->filter(function($absensi) {
+            return count($absensi) > 0;
+        }));
+        
+        // Menghitung jumlah karyawan yang izin
+        $izin = count($absensi->filter(function($absensi) {
+            return count($absensi) === 0;
+        }));
+        
+        $users = $users->paginate(10)->withQueryString();
+        return view('absensi.index', compact('users', 'selectedDate', 'hadir', 'izin'));
     }
 
     public function create()

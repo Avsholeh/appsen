@@ -37,7 +37,7 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Hadir</h5>
-                            <span>10</span>
+                            <span>{{ $hadir }}</span>
                         </div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                     <div class="card h-100">
                         <div class="card-body">
                             <h5 class="card-title">Izin</h5>
-                            <span>10</span>
+                            <span>{{ $izin }}</span>
                         </div>
                     </div>
                 </div>
