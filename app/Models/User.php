@@ -42,9 +42,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function jabatan()
+    {
+        return $this->belongsTo(Jabatan::class, 'jabatan_id', 'id');
+    }
+
     public function departemen()
     {
-        return $this->hasOne(Departemen::class, 'id', 'departemen_id');
+        return $this->belongsTo(Departemen::class, 'departemen_id', 'id');
     }
 
     public function absensi()
