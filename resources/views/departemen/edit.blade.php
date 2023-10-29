@@ -15,8 +15,6 @@
                 @csrf
                 @method('PUT')
 
-                <input type="hidden" name="id" value="{{ $departemen->id }}">
-
                 <div class="form-group mb-3">
                     <label for="" class="form-label">Nama</label>
                     <input type="text" name="nama" class="form-control" value="{{ $departemen->nama }}">

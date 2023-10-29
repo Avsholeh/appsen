@@ -80,14 +80,14 @@ class DepartemenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'nama' => 'required',
             'deskripsi' => 'required',
         ]);
 
-        $departemen = Departemen::find($request->id);
+        $departemen = Departemen::find($id);
         $departemen->nama = $request->nama;
         $departemen->deskripsi = $request->deskripsi;
         $departemen->save();
