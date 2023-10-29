@@ -22,7 +22,7 @@ class AbsensiController extends Controller
             'absensi' => function ($q) use ($selectedDate) {
                 $q->where('tanggal', $selectedDate->format('Y-m-d'));
             }
-        ])->paginate(10);
+        ])->paginate(10)->withQueryString();
         return view('absensi.index', compact('users', 'selectedDate'));
     }
 

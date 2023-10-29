@@ -25,6 +25,7 @@
                             <h5 class="card-title">Tanggal</h5>
                             <form id="tanggal" action="{{ route('absensi.index') }}" method="GET" class="d-inline-block">
                                 <input type="date" name="tanggal" class="form-control" value="{{ $selectedDate->format('Y-m-d') }}">
+                                <input type="hidden" name="page" value="{{ request('page') }}">
                             </form>
                         </div>
                     </div>
@@ -67,7 +68,7 @@
                 <tbody>
                     @foreach ($users as $user)
                         <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
+                            <th scope="row">{{ $users->firstItem() + $loop->iteration - 1 }}</th>
                             <td>
                                 <small class="badge bg-primary me-2">{{ $user->id }}</small>
                                 <span>{{ $user->name }}</span>
