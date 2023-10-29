@@ -11,7 +11,7 @@
     <header>
         @include('partials.navbar')
     </header>
-    <main class="py-4">
+    <main class="py-4 px-3">
         @yield('content')
     </main>
     <script src="{{ asset('js/app.js') }}"></script>
